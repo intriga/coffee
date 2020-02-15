@@ -26,7 +26,7 @@ export default {
         }
     },
     created() {
-        let url = 'http://coffee.int/api/post/'+this.slug;
+        let url = 'https://shrouded-cliffs-70003.herokuapp.com/api/post/'+this.slug;
 
         axios.get(url)
             .then(response => {
