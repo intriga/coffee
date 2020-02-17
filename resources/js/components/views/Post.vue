@@ -7,7 +7,7 @@
           <h2 class="section-heading"
             v-text="post.title"></h2>
 
-            <img :src="post.file">
+            <img :src="post.file" class="img-fluid">
 
           <p
             v-html="post.content"></p>
