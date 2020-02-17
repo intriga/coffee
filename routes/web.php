@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+// Route::get('/', function () {
+//     return view('layouts.app');
+// });
+
+ Route::get('/{vue_capture?}', function () {
+   return view('layouts.app');
+ })->where('vue_capture', '[\/\w\.-]*');
 
 // Auth::routes();
 
