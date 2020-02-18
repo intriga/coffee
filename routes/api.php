@@ -18,4 +18,8 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('posts', 'PostController@index');
-Route::get('post/{slug}', 'PostController@show');
+// Route::get('post/{slug}', 'PostController@show');
+
+Route::group(['middleware' => 'cors'], function () {
+    Route::get('post/{slug}', 'PostController@show');
+});
